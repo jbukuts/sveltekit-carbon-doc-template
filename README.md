@@ -1,6 +1,6 @@
 # Carbon SvelteKit Documentation Template
 
-This is a site template created with Next.js and Carbon Design System that is intended to build a documentation-style site as static assets.
+This is a site template created with SvelteKit and Carbon Design System that is intended to build a documentation-style site as static assets.
 
 It is built using:
 
