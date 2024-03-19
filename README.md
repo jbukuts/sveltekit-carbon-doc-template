@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Carbon SvelteKit Documentation Template
 
-This is a site template built from Next.js and Carbon Design System that is intended to build a documentation-style site to static assets.
+This is a site template created with Next.js and Carbon Design System that is intended to build a documentation-style site as static assets.
 
 It is built using:
 
@@ -14,7 +12,7 @@ It is built using:
 
 ## Getting Started
 
-> This template requires a minumim of Node v18.17.0 be installed.
+> This template requires a minimum of Node v18.17.0 to be installed.
 
 First install dependencies via:
 
@@ -46,7 +44,7 @@ npm run preview -- --open
 
 This will open the prod build of the site in your browser at http://localhost:4174.
 
-> The currrently configured adapter is for a static build. Read about more adapters [here](https://kit.svelte.dev/docs/adapters)
+> The currently configured adapter is for a static build. Read about more adapters [here](https://kit.svelte.dev/docs/adapters)
 
 ## Learn More
 
