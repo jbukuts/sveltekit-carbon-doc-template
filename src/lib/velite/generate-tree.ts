@@ -1,5 +1,5 @@
 import setWith from 'lodash/setWith';
-import type { labs } from '../../../../.velite';
+import type { labs } from '../.velite';
 import generateMap from './generate-map';
 
 const SLUG_MAP = generateMap();

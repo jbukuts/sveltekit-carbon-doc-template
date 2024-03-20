@@ -1,5 +1,6 @@
 <script lang="ts">
   import 'carbon-components-svelte/css/all.css';
+  import '../styles/global.scss';
   import {
     Header,
     SideNav,
@@ -12,13 +13,17 @@
     HeaderSearch,
     Theme
   } from 'carbon-components-svelte';
-  import { Light, EarthFilled } from 'carbon-icons-svelte';
+  import { Light, EarthFilled, Moon } from 'carbon-icons-svelte';
   import { browser } from '$app/environment';
+  import { SLUG_TREE } from '$lib/velite';
+  import SideNavTree from '$lib/components/SideNavTree.svelte';
 
   type CarbonTheme = 'white' | 'g10' | 'g90' | 'g100';
 
   let isSideNavOpen = false;
   let theme: CarbonTheme = 'g100';
+
+  let tree = SLUG_TREE.children!.en!.children!;
 
   function toggleTheme() {
     theme = theme === 'g100' ? 'white' : 'g100';
@@ -26,17 +31,17 @@
 
   // reacive statement like useEffect
   $: if (browser) {
-    // document.documentElement.setAttribute("theme", theme);
+    document.documentElement.style.colorScheme = theme === 'g100' ? 'dark' : 'light';
   }
 </script>
 
 <Theme bind:theme persist persistKey="__carbon-theme" />
-<Header company="IBM" platformName="VAD VAR Svelte" bind:isSideNavOpen>
+<Header company="Carbon" platformName="SvelteKit Template" bind:isSideNavOpen>
   <HeaderUtilities>
     <HeaderSearch />
     <HeaderGlobalAction
       on:click={toggleTheme}
-      icon={Light}
+      icon={theme === 'white' ? Light : Moon}
       iconDescription="Toggle theme"
       tooltipAlignment="end" />
     <HeaderGlobalAction
@@ -50,7 +55,7 @@
   <SideNavItems>
     <SideNavLink text="Home" href="/"></SideNavLink>
     <SideNavDivider></SideNavDivider>
-    <SideNavLink text="Test Page" href="/en/test-base"></SideNavLink>
+    <SideNavTree navItems={tree}></SideNavTree>
   </SideNavItems>
 </SideNav>
 
@@ -59,8 +64,9 @@
 </Content>
 
 <style lang="scss">
-  $carbon--theme: themes.$carbon--theme--g100;
+  // $carbon--theme: themes.$carbon--theme--g100;
   :global(#sidebar) {
-    border-right: 1px solid gray !important;
+    border-right: 1px solid var(--cds-border-subtle) !important;
+    background-color: var(--cds-ui-01);
   }
 </style>

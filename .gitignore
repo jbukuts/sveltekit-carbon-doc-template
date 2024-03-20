@@ -11,4 +11,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # velite
-/src/lib/velite
+/src/lib/.velite

@@ -1,0 +1,39 @@
+$indent: 1rem;
+
+html[theme="g100"] {
+  & .bx--side-nav__submenu, .bx--side-nav__link {
+    & > span {
+      color: var(--cds-text-01) !important;
+    }
+
+    & svg {
+      fill: var(--cds-text-01) !important;
+    }
+
+    &:hover {
+      background-color: var(--cds-ui-02) !important;
+    }
+  }
+}
+
+
+@for $i from 0 through 10 {
+  .depth-#{$i} {
+    & > a {
+      padding-left: calc($i * $indent) !important;
+    }
+
+    & > span {
+      padding-left: calc(max($i - 1, 0) * $indent) !important;
+    }
+  }
+}
+
+
+.bx--content {
+  & > article > #article-layout {
+    & > * {
+      margin-bottom: 1.475rem !important;
+    }
+  }
+}

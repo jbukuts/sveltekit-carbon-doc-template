@@ -23,10 +23,10 @@ npm ci
 Then, run the development server:
 
 ```bash
-npm run dev -- --open
+npm run dev
 ```
 
-This will open the dev site at http://localhost:5173 in your browser.
+You can then open the dev site at http://localhost:5173 in your browser.
 
 ## Building for production
 

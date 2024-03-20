@@ -14,7 +14,7 @@ package-lock.json
 yarn.lock
 
 # velite
-/src/lib/velite
+/src/lib/.velite
 
 # auto import vite plugin
 auto-imports.d.ts

@@ -1,4 +1,4 @@
-import { labs } from '../../../../.velite';
+import { labs } from '../.velite';
 
 /**
  *

@@ -4,7 +4,7 @@ import { defineConfig, s } from 'velite';
 export default defineConfig({
   root: './',
   output: {
-    data: 'src/lib/velite'
+    data: 'src/lib/.velite'
   },
   collections: {
     labs: {

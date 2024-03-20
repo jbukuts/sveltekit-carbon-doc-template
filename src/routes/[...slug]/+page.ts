@@ -1,6 +1,6 @@
 // import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { labs } from '$lib/velite';
+import { labs } from '$lib/.velite';
 import type { SvelteComponent } from 'svelte';
 
 type MDXFile = { default: SvelteComponent };
@@ -13,7 +13,7 @@ async function getContent(slug: string) {
   const { path, updated, title, timeToComplete } = item;
 
   // find actual module
-  const modules = import.meta.glob(`/content/*.{md,svx,svelte.md}`);
+  const modules = import.meta.glob(`/content/**/*.{md,svx,svelte.md}`);
   const { default: comp } = await (modules[`/${path}.md`] as MDXResolve)();
 
   return {
